@@ -456,6 +456,51 @@ button.work-card{font-family:var(--font);border:1px solid var(--border);text-ali
   .metro-station,.station-majestic{padding:0 11px}
   .manifesto-inner{padding:60px 22px}
 }
+/* ══ CASE FILES (from Designdetective) ══ */
+.cf-wrap{margin-top:54px}
+.cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cf-card{position:relative;display:flex;flex-direction:column;gap:10px;text-align:left;width:100%;padding:22px 22px 18px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--font);cursor:pointer;transition:transform .28s,border-color .28s,box-shadow .28s}
+.cf-card::before{content:'';position:absolute;top:-1px;left:22px;width:54px;height:3px;border-radius:0 0 3px 3px;background:var(--accent);opacity:.7;transition:background .5s ease}
+.cf-card:hover{transform:translateY(-4px);border-color:rgba(45,224,184,.28);box-shadow:0 18px 44px var(--shadow)}
+.cf-card:hover .card-arr{border-color:var(--green);color:var(--green);background:var(--green-dim)}
+.cf-card-top{display:flex;flex-direction:column;gap:4px}
+.cf-index{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--accent)}
+.cf-tag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted)}
+.cf-title{display:block;font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.cf-summary{display:block;font-size:13px;font-weight:300;color:var(--muted);line-height:1.65}
+.cf-note{display:block;font-size:12.5px;font-style:italic;font-weight:300;color:var(--text);opacity:.8;line-height:1.55;border-left:2px solid var(--purple);padding-left:10px}
+.cf-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px;border-top:1px solid var(--border)}
+.cf-outcome{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:var(--green);text-transform:uppercase}
+.cf-detail-kicker{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
+.cf-detail-summary{font-size:14px;font-weight:300;color:var(--muted);line-height:1.65}
+.cf-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px}
+.cf-meta>div{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.cf-meta dt{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--green);margin-bottom:5px;text-transform:uppercase}
+.cf-meta dd{font-size:12.5px;font-weight:300;color:var(--text);line-height:1.55}
+.cf-section{margin-bottom:24px}
+.cf-section .case-list{list-style:none}
+.cf-section-title{font-size:15px;font-weight:500;color:var(--text);letter-spacing:-.01em;margin-bottom:8px}
+.cf-flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px;counter-reset:none}
+.cf-flow li{position:relative;display:flex;flex-direction:column;gap:4px;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:12px}
+.cf-flow li:not(:last-child)::after{content:'';position:absolute;top:50%;right:-11px;width:10px;height:1.5px;background:var(--green);opacity:.5}
+.cf-flow-n{font-family:var(--mono);font-size:9px;color:var(--green);letter-spacing:.1em}
+.cf-flow strong{font-size:13px;font-weight:500}
+.cf-flow li>span:last-child{font-size:11.5px;font-weight:300;color:var(--muted);line-height:1.5}
+.cf-result{margin-top:12px;font-size:13px;font-weight:300;color:var(--text);line-height:1.6;background:var(--green-dim);border:1px solid rgba(45,224,184,.2);border-radius:8px;padding:12px 14px}
+.cf-result span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--green);margin-bottom:4px;text-transform:uppercase}
+.cf-cta{border-top:1px solid var(--border);padding-top:20px;margin-top:4px}
+.cf-cta p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.cf-cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cf-clients{margin-top:54px}
+.cf-logo-grid{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cf-logo{display:flex;flex-direction:column;align-items:center;gap:8px}
+.cf-logo-plate{width:100%;height:76px;background:#fff;border:1px solid var(--border);border-radius:var(--r);display:flex;align-items:center;justify-content:center;padding:14px 18px}
+.cf-logo-plate img{max-width:100%;max-height:40px;object-fit:contain}
+.cf-logo-note{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:var(--muted)}
+.cf-card:focus-visible,.cf-modal a:focus-visible,.cf-modal button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:900px){.cf-grid{grid-template-columns:1fr 1fr}.cf-logo-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.cf-grid{grid-template-columns:1fr}.cf-meta{grid-template-columns:1fr}.cf-flow{grid-template-columns:1fr 1fr}.cf-flow li::after{display:none}.cf-logo-grid{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){.cf-card,.cf-logo.reveal,.cf-card.reveal{transition:none;transform:none}.cf-card.reveal,.cf-logo.reveal{opacity:1}}
 </style>
 </head>
 <body>
@@ -756,6 +801,323 @@ button.work-card{font-family:var(--font);border:1px solid var(--border);text-ali
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ══ CASE FILES (from Designdetective) ══ -->
+    <div class="cf-wrap" id="case-files">
+      <div class="pp-label">CASE FILES</div>
+      <p class="pp-sub">A closer look at five BFSI products: the problem I found, how I worked through it, and what changed. Some details are left out because the work is confidential.</p>
+      <div class="cf-grid">
+        <button type="button" class="cf-card reveal" data-cf="field-operation-platform" aria-haspopup="dialog" aria-label="Field Operation Platform. Open case file">
+          <span class="cf-card-top"><span class="cf-index">CASE 01 / PRIMARY</span><span class="cf-tag">BFSI / FIELD OPERATIONS</span></span>
+          <span class="cf-title">Field Operation Platform</span>
+          <span class="cf-summary">A mobile app for preparing visits, finding business details, and following up in the field.</span>
+          <span class="cf-note">The real problem started before the visit.</span>
+          <span class="cf-foot"><span class="cf-outcome">Field workflow simplified</span><span class="card-arr"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></span>
+        </button>
+        <button type="button" class="cf-card reveal rd1" data-cf="kenya-market-entry" aria-haspopup="dialog" aria-label="Kenya Lending Market Entry. Open case file">
+          <span class="cf-card-top"><span class="cf-index">CASE 02 / FIELD</span><span class="cf-tag">LENDING / MARKET ENTRY</span></span>
+          <span class="cf-title">Kenya Lending Market Entry</span>
+          <span class="cf-summary">A personal loan application designed for customers and lenders in Kenya.</span>
+          <span class="cf-note">The loan journey needed to fit the Kenyan market.</span>
+          <span class="cf-foot"><span class="cf-outcome">First clients onboarded</span><span class="card-arr"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></span>
+        </button>
+        <button type="button" class="cf-card reveal rd2" data-cf="due-diligence-kyb" aria-haspopup="dialog" aria-label="Due Diligence Platform (KYB). Open case file">
+          <span class="cf-card-top"><span class="cf-index">CASE 03 / FIELD</span><span class="cf-tag">BFSI / DUE DILIGENCE</span></span>
+          <span class="cf-title">Due Diligence Platform (KYB)</span>
+          <span class="cf-summary">A workspace for reviewing business details, checking risk, and recording KYB decisions.</span>
+          <span class="cf-note">Reviewers needed to see the evidence behind each decision.</span>
+          <span class="cf-foot"><span class="cf-outcome">Review workflow clarified</span><span class="card-arr"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></span>
+        </button>
+        <button type="button" class="cf-card reveal" data-cf="video-kyc" aria-haspopup="dialog" aria-label="Video KYC for NBFCs &amp; Banks. Open case file">
+          <span class="cf-card-top"><span class="cf-index">CASE 04 / REGULATED</span><span class="cf-tag">BFSI / IDENTITY</span></span>
+          <span class="cf-title">Video KYC for NBFCs &amp; Banks</span>
+          <span class="cf-summary">A video verification flow that helped customers complete identity checks while meeting compliance requirements.</span>
+          <span class="cf-note">Customers needed guidance. Reviewers needed a reliable record.</span>
+          <span class="cf-foot"><span class="cf-outcome">Clearer verification steps</span><span class="card-arr"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></span>
+        </button>
+        <button type="button" class="cf-card reveal rd1" data-cf="watchlist-monitoring" aria-haspopup="dialog" aria-label="Watchlist Monitoring. Open case file">
+          <span class="cf-card-top"><span class="cf-index">CASE 05 / SYSTEM</span><span class="cf-tag">BFSI / MONITORING OPS</span></span>
+          <span class="cf-title">Watchlist Monitoring</span>
+          <span class="cf-summary">A risk monitoring prototype covering alerts, review tasks, permissions, and follow-up.</span>
+          <span class="cf-note">I worked through the missing requirements before designing the screens.</span>
+          <span class="cf-foot"><span class="cf-outcome">Decisions ready to validate</span><span class="card-arr"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></span>
+        </button>
+      </div>
+
+      <!-- Case file detail dialog -->
+      <div class="perfios-modal cf-modal" id="cfModal">
+        <div class="perfios-modal-backdrop" id="cfModalBackdrop"></div>
+        <div class="perfios-modal-panel" role="dialog" aria-modal="true">
+          <button type="button" class="perfios-modal-close" id="cfModalClose" aria-label="Close case file">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="perfios-modal-scroll">
+            <article class="cf-detail" data-cf="field-operation-platform" hidden>
+              <div class="perfios-modal-header">
+                <div class="cf-detail-kicker">CASE 01 / PRIMARY · BFSI / FIELD OPERATIONS</div>
+                <h2 class="perfios-modal-title" id="cf-title-field-operation-platform">Field Operation Platform</h2>
+                <p class="cf-detail-summary">A mobile app for preparing visits, finding business details, and following up in the field.</p>
+              </div>
+              <dl class="cf-meta">
+                <div><dt>Role</dt><dd>Product designer, from research to delivery</dd></div>
+                <div><dt>Scope</dt><dd>Field research, workflow architecture, interaction design</dd></div>
+                <div><dt>Worked with</dt><dd>Product, engineering, and field stakeholders</dd></div>
+                <div><dt>Key decision</dt><dd>Build around how agents work in the field, rather than copy the desktop product.</dd></div>
+              </dl>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE PROBLEM</h3>
+                <p class="cf-section-title">The problem started before the first visit.</p>
+                <p class="case-block-text">The brief was to design a mobile app. When I looked at an agent&#x27;s day, I found that much of the work happened before and after the visit. Business details were spread across calls, notebooks, and desktop systems. I focused on bringing that information into the field workflow, so agents would not have to gather it again for every visit.</p>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">WHAT I DID</h3>
+                <ul class="case-list">
+                  <li class="case-list-item">I followed agents through preparation, travel, visits, and follow-up to understand where they lost information.</li>
+                  <li class="case-list-item">I tried different ways to organise the workflow and checked them against what agents could do in the field.</li>
+                  <li class="case-list-item">I prioritised business lookup, qualification, and reliable lead capture instead of matching every desktop feature.</li>
+                </ul>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE STRUCTURE</h3>
+                <p class="cf-section-title">How I organised the mobile workflow</p>
+                <ol class="cf-flow">
+                  <li><span class="cf-flow-n">01</span><strong>Prepare</strong><span>Review the business before visiting</span></li>
+                  <li><span class="cf-flow-n">02</span><strong>Verify</strong><span>Check the details needed for the visit</span></li>
+                  <li><span class="cf-flow-n">03</span><strong>Qualify</strong><span>Record lead details and next steps</span></li>
+                  <li><span class="cf-flow-n">04</span><strong>Follow up</strong><span>Track visits and follow-up</span></li>
+                </ol>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE RESULT</h3>
+                <p class="cf-section-title">What the mobile workflow changed</p>
+                <p class="case-block-text">The design brought preparation, business lookup, qualification, and follow-up into one app. Agents could review the business before a visit, capture leads in a consistent format, and record what needed to happen next.</p>
+                <p class="cf-result"><span>Field workflow simplified</span>Preparation, business lookup, lead capture, and follow-up in one mobile workflow.</p>
+              </section>
+              <div class="cf-cta">
+                <p>Some project details are confidential. I can walk you through my approach in a conversation.</p>
+                <div class="cf-cta-actions">
+                  <a class="btn-p" href="mailto:pavansharma40.pk@gmail.com?subject=Field%20Operation%20Platform%20case%20study">Email me about this</a>
+                  <a class="btn-g" href="https://in.linkedin.com/in/pavan-kumar-s-439a39174" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+            <article class="cf-detail" data-cf="kenya-market-entry" hidden>
+              <div class="perfios-modal-header">
+                <div class="cf-detail-kicker">CASE 02 / FIELD · LENDING / MARKET ENTRY</div>
+                <h2 class="perfios-modal-title" id="cf-title-kenya-market-entry">Kenya Lending Market Entry</h2>
+                <p class="cf-detail-summary">A personal loan application designed for customers and lenders in Kenya.</p>
+              </div>
+              <dl class="cf-meta">
+                <div><dt>Role</dt><dd>Lead designer, from application to onboarding</dd></div>
+                <div><dt>Scope</dt><dd>Market localisation, journey design, product pitch</dd></div>
+                <div><dt>Worked with</dt><dd>Product, engineering, and regional stakeholders</dd></div>
+                <div><dt>Key decision</dt><dd>Adapt identity checks, eligibility, and loan offers to the Kenyan market.</dd></div>
+              </dl>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE PROBLEM</h3>
+                <p class="cf-section-title">Why the existing loan journey needed to change</p>
+                <p class="case-block-text">The existing loan journey was not a direct fit for Kenya. I had to account for local customer behaviour, regulations, and the platform&#x27;s technical limits when designing identity checks, eligibility, and loan offers.</p>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">WHAT I DID</h3>
+                <ul class="case-list">
+                  <li class="case-list-item">I adapted the identity, eligibility, and offer steps for Kenya.</li>
+                  <li class="case-list-item">I considered local customer behaviour alongside what the existing platform could support.</li>
+                  <li class="case-list-item">I designed the full journey so product, engineering, and clients could review how it would work.</li>
+                </ul>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE STRUCTURE</h3>
+                <p class="cf-section-title">How I adapted the loan journey</p>
+                <ol class="cf-flow">
+                  <li><span class="cf-flow-n">01</span><strong>Identity</strong><span>Customer details and identity checks</span></li>
+                  <li><span class="cf-flow-n">02</span><strong>Eligibility</strong><span>Checks for the Kenyan market</span></li>
+                  <li><span class="cf-flow-n">03</span><strong>Offer</strong><span>Clear lending decisions</span></li>
+                  <li><span class="cf-flow-n">04</span><strong>Onboarding</strong><span>A complete application flow</span></li>
+                </ol>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE RESULT</h3>
+                <p class="cf-section-title">From the pitch to client onboarding</p>
+                <p class="case-block-text">The localised design helped clients see how the loan application would work for their customers. It supported the regional pitch and the team&#x27;s first client onboarding in Kenya.</p>
+                <p class="cf-result"><span>First clients onboarded</span>The team moved from the product pitch to onboarding its first Kenyan clients.</p>
+              </section>
+              <div class="cf-cta">
+                <p>I can explain the market requirements and the choices I made.</p>
+                <div class="cf-cta-actions">
+                  <a class="btn-p" href="mailto:pavansharma40.pk@gmail.com?subject=Kenya%20Market%20Entry%20case%20study">Email me about this</a>
+                  <a class="btn-g" href="https://in.linkedin.com/in/pavan-kumar-s-439a39174" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+            <article class="cf-detail" data-cf="due-diligence-kyb" hidden>
+              <div class="perfios-modal-header">
+                <div class="cf-detail-kicker">CASE 03 / FIELD · BFSI / DUE DILIGENCE</div>
+                <h2 class="perfios-modal-title" id="cf-title-due-diligence-kyb">Due Diligence Platform (KYB)</h2>
+                <p class="cf-detail-summary">A workspace for reviewing business details, checking risk, and recording KYB decisions.</p>
+              </div>
+              <dl class="cf-meta">
+                <div><dt>Role</dt><dd>Sole product designer, from research to delivery</dd></div>
+                <div><dt>Scope</dt><dd>Research, information architecture, interaction design, delivery</dd></div>
+                <div><dt>Worked with</dt><dd>Product, engineering, and review roles</dd></div>
+                <div><dt>Key decision</dt><dd>Keep business evidence, review notes, and handoffs together so the next reviewer can follow the decision.</dd></div>
+              </dl>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE PROBLEM</h3>
+                <p class="cf-section-title">Reviewers were rebuilding context by hand.</p>
+                <p class="case-block-text">Reviewers had to gather business details from several screens before they could assess risk. They also needed to explain their decision and pass the review to someone else. I wanted the workspace to keep the evidence and the review notes together.</p>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">WHAT I DID</h3>
+                <ul class="case-list">
+                  <li class="case-list-item">I mapped how each role found business evidence, reviewed it, and passed the work on.</li>
+                  <li class="case-list-item">I grouped related information, simplified labels, and designed ways to recover when a task could not be completed.</li>
+                  <li class="case-list-item">I checked whether the flow was understandable and feasible to build before finalising it.</li>
+                </ul>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE STRUCTURE</h3>
+                <p class="cf-section-title">How I organised the review workspace</p>
+                <ol class="cf-flow">
+                  <li><span class="cf-flow-n">01</span><strong>Search</strong><span>Find the entity</span></li>
+                  <li><span class="cf-flow-n">02</span><strong>Orient</strong><span>See business details and review status</span></li>
+                  <li><span class="cf-flow-n">03</span><strong>Review</strong><span>Check evidence and risk flags</span></li>
+                  <li><span class="cf-flow-n">04</span><strong>Handoff</strong><span>Pass on the evidence and review notes</span></li>
+                </ol>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE RESULT</h3>
+                <p class="cf-section-title">A clearer review and handoff</p>
+                <p class="case-block-text">The design gave reviewers one place to read business details, inspect evidence, and record the next action. Clear grouping and a consistent handoff helped different roles discuss the same review.</p>
+                <p class="cf-result"><span>Review workflow clarified</span>Reviewers could find business evidence and discuss risk without piecing the information together again.</p>
+              </section>
+              <div class="cf-cta">
+                <p>This product is under NDA. I can discuss my role and approach without sharing confidential details.</p>
+                <div class="cf-cta-actions">
+                  <a class="btn-p" href="mailto:pavansharma40.pk@gmail.com?subject=Due%20Diligence%20Platform%20case%20study">Email me about this</a>
+                </div>
+              </div>
+            </article>
+            <article class="cf-detail" data-cf="video-kyc" hidden>
+              <div class="perfios-modal-header">
+                <div class="cf-detail-kicker">CASE 04 / REGULATED · BFSI / IDENTITY</div>
+                <h2 class="perfios-modal-title" id="cf-title-video-kyc">Video KYC for NBFCs &amp; Banks</h2>
+                <p class="cf-detail-summary">A video verification flow that helped customers complete identity checks while meeting compliance requirements.</p>
+              </div>
+              <dl class="cf-meta">
+                <div><dt>Role</dt><dd>Product designer, research and delivery</dd></div>
+                <div><dt>Scope</dt><dd>Research, verification flow, recovery states, delivery</dd></div>
+                <div><dt>Worked with</dt><dd>Product, engineering, compliance, and operations</dd></div>
+                <div><dt>Key decision</dt><dd>Give customers clear instructions while keeping verification evidence visible to reviewers.</dd></div>
+              </dl>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE PROBLEM</h3>
+                <p class="cf-section-title">What a video verification call needed to cover</p>
+                <p class="case-block-text">Customers needed to understand what to do during a video verification call. Reviewers needed the required documents and a record they could audit. I designed the flow to support both sides of the call.</p>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">WHAT I DID</h3>
+                <ul class="case-list">
+                  <li class="case-list-item">I mapped the call, document capture, and reviewer handoff.</li>
+                  <li class="case-list-item">I designed recovery steps for weak connections and incomplete documents.</li>
+                  <li class="case-list-item">I kept verification status visible and used clear instructions to help customers complete each step.</li>
+                </ul>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE STRUCTURE</h3>
+                <p class="cf-section-title">How I designed the verification steps</p>
+                <ol class="cf-flow">
+                  <li><span class="cf-flow-n">01</span><strong>Prepare</strong><span>Readiness and consent</span></li>
+                  <li><span class="cf-flow-n">02</span><strong>Connect</strong><span>One-to-one verification</span></li>
+                  <li><span class="cf-flow-n">03</span><strong>Capture</strong><span>Compliant evidence</span></li>
+                  <li><span class="cf-flow-n">04</span><strong>Resolve</strong><span>Review and recovery</span></li>
+                </ol>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE RESULT</h3>
+                <p class="cf-section-title">A clearer call for customers and reviewers</p>
+                <p class="case-block-text">The design made identity checks easier to follow while keeping the evidence, status, and review controls needed for compliance.</p>
+                <p class="cf-result"><span>Clearer verification steps</span>Less friction during identity checks without compromising compliance.</p>
+              </section>
+              <div class="cf-cta">
+                <p>I can walk you through the verification flow and how I handled interrupted calls.</p>
+                <div class="cf-cta-actions">
+                  <a class="btn-p" href="mailto:pavansharma40.pk@gmail.com?subject=Video%20KYC%20case%20study">Email me about this</a>
+                  <a class="btn-g" href="https://in.linkedin.com/in/pavan-kumar-s-439a39174" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+            <article class="cf-detail" data-cf="watchlist-monitoring" hidden>
+              <div class="perfios-modal-header">
+                <div class="cf-detail-kicker">CASE 05 / SYSTEM · BFSI / MONITORING OPS</div>
+                <h2 class="perfios-modal-title" id="cf-title-watchlist-monitoring">Watchlist Monitoring</h2>
+                <p class="cf-detail-summary">A risk monitoring prototype covering alerts, review tasks, permissions, and follow-up.</p>
+              </div>
+              <dl class="cf-meta">
+                <div><dt>Role</dt><dd>Product designer, from requirements to prototype</dd></div>
+                <div><dt>Scope</dt><dd>Problem framing, interaction models, prototype, decision record</dd></div>
+                <div><dt>Worked with</dt><dd>Product and engineering validation</dd></div>
+                <div><dt>Key decision</dt><dd>Resolve system behaviour before polishing the interface.</dd></div>
+              </dl>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE PROBLEM</h3>
+                <p class="cf-section-title">The brief described screens, but not the system.</p>
+                <p class="case-block-text">The brief described a monitoring workspace but left several requirements open. I needed to work out how navigation, first use, permissions, and follow-up would behave before designing the final screens.</p>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">WHAT I DID</h3>
+                <ul class="case-list">
+                  <li class="case-list-item">I reviewed the brief, identified conflicting requirements, and listed the questions the team needed to resolve.</li>
+                  <li class="case-list-item">I mapped the same tasks across permissions, empty states, severity levels, and error recovery.</li>
+                  <li class="case-list-item">I built alternative flows and recorded which choices still needed review from product and engineering.</li>
+                </ul>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE STRUCTURE</h3>
+                <p class="cf-section-title">How I organised alerts, reviews, and actions</p>
+                <ol class="cf-flow">
+                  <li><span class="cf-flow-n">01</span><strong>Signal intake</strong><span>Changes enter one review queue</span></li>
+                  <li><span class="cf-flow-n">02</span><strong>Triage</strong><span>Severity and status support scanning</span></li>
+                  <li><span class="cf-flow-n">03</span><strong>Investigation</strong><span>Keep related evidence with the review</span></li>
+                  <li><span class="cf-flow-n">04</span><strong>Resolution</strong><span>Record actions and review history</span></li>
+                </ol>
+              </section>
+              <section class="case-block cf-section">
+                <h3 class="case-block-h">THE RESULT</h3>
+                <p class="cf-section-title">A prototype the team could review</p>
+                <p class="case-block-text">The prototype let the team compare different flows instead of discussing requirements in isolation. I recorded what the design covered and which questions still needed product, engineering, or user input.</p>
+                <p class="cf-result"><span>Decisions ready to validate</span>A working prototype ready for validation.</p>
+              </section>
+              <div class="cf-cta">
+                <p>I can show you the prototype and explain the decisions behind it.</p>
+                <div class="cf-cta-actions">
+                  <a class="btn-p" href="mailto:pavansharma40.pk@gmail.com?subject=Watchlist%20Monitoring%20case%20study">Email me about this</a>
+                  <a class="btn-g" href="https://in.linkedin.com/in/pavan-kumar-s-439a39174" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CLIENTS (from Designdetective) ══ -->
+    <div class="cf-clients">
+      <div class="pp-label">TEAMS I HAVE DESIGNED FOR</div>
+      <p class="pp-sub">Banks, lenders and insurers whose products I worked on through client projects.</p>
+      <ul class="cf-logo-grid">
+        <li class="cf-logo reveal"><span class="cf-logo-plate"><img src="assets/brands/bank-of-baroda.png" alt="Bank of Baroda" loading="lazy"></span><span class="cf-logo-note">PERFIOS CLIENT</span></li>
+        <li class="cf-logo reveal rd1"><span class="cf-logo-plate"><img src="assets/brands/kotak-bank.svg" alt="Kotak Bank" loading="lazy"></span><span class="cf-logo-note">PERFIOS CLIENT</span></li>
+        <li class="cf-logo reveal rd2"><span class="cf-logo-plate"><img src="assets/brands/tata-capital.png" alt="Tata Capital" loading="lazy"></span><span class="cf-logo-note">SCREENROOT CLIENT</span></li>
+        <li class="cf-logo reveal rd3"><span class="cf-logo-plate"><img src="assets/brands/ceat.png" alt="CEAT" loading="lazy"></span><span class="cf-logo-note">SCREENROOT CLIENT</span></li>
+        <li class="cf-logo reveal"><span class="cf-logo-plate"><img src="assets/brands/pramerica-life.svg" alt="Pramerica Life Insurance" loading="lazy"></span><span class="cf-logo-note">SCREENROOT CLIENT</span></li>
+        <li class="cf-logo reveal rd1"><span class="cf-logo-plate"><img src="assets/brands/canara-bank.svg" alt="Canara Bank" loading="lazy"></span><span class="cf-logo-note">CLIENT</span></li>
+        <li class="cf-logo reveal rd2"><span class="cf-logo-plate"><img src="assets/brands/bank-of-india.svg" alt="Bank of India" loading="lazy"></span><span class="cf-logo-note">CLIENT</span></li>
+        <li class="cf-logo reveal rd3"><span class="cf-logo-plate"><img src="assets/brands/dmi-finance.svg" alt="DMI Finance" loading="lazy"></span><span class="cf-logo-note">CLIENT</span></li>
+        <li class="cf-logo reveal"><span class="cf-logo-plate"><img src="assets/brands/zurich.svg" alt="Zurich" loading="lazy"></span><span class="cf-logo-note">CLIENT</span></li>
+        <li class="cf-logo reveal rd1"><span class="cf-logo-plate"><img src="assets/brands/easy-pay.png" alt="Easy Pay" loading="lazy"></span><span class="cf-logo-note">CLIENT</span></li>
+      </ul>
     </div>
 
     <!-- ══ PERSONAL PROJECTS & CASE STUDIES ══ -->
@@ -1318,6 +1680,55 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   closeBtn.addEventListener('click', close);
   backdrop.addEventListener('click', close);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+
+// ══ CASE FILES DIALOG ══
+(function initCaseFiles(){
+  const modal = document.getElementById('cfModal');
+  if (!modal) return;
+  const panel = modal.querySelector('.perfios-modal-panel');
+  const scroller = modal.querySelector('.perfios-modal-scroll');
+  const closeBtn = document.getElementById('cfModalClose');
+  const backdrop = document.getElementById('cfModalBackdrop');
+  const details = modal.querySelectorAll('.cf-detail');
+  let trigger = null;
+  function setChrome(hidden){
+    const nav = document.querySelector('.metro-nav');
+    if (nav) nav.style.display = hidden ? 'none' : '';
+    const navCtrls = document.querySelector('.nav-controls');
+    if (navCtrls) navCtrls.style.display = hidden ? 'none' : '';
+  }
+  function open(id, from){
+    details.forEach(d => { d.hidden = d.dataset.cf !== id; });
+    panel.setAttribute('aria-labelledby', 'cf-title-' + id);
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    setChrome(true);
+    scroller.scrollTop = 0;
+    trigger = from;
+    closeBtn.focus();
+  }
+  function close(){
+    if (!modal.classList.contains('show')) return;
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+    setChrome(false);
+    if (trigger) trigger.focus();
+  }
+  document.querySelectorAll('.cf-card').forEach(card => {
+    card.addEventListener('click', () => open(card.dataset.cf, card));
+  });
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', e => {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    const focusable = [...panel.querySelectorAll('a[href],button')].filter(el => el.offsetParent !== null);
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
 })();
 
 // ══ CASE STUDY ACCORDION ══
